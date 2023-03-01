@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-dark p-4 d-flex justify-content-between sticky-top">
+        <h2 class="text-white ms-5">Choice Your Phone</h2>
+        <div class="w-50 d-flex gap-4 me-5">
+            <input id="search-field" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Phone Name">
+            <button class="btn btn-primary mt-2" id="btn-search">Submit</button>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="phone_container">
+            
+            </div>
+            <div class="mt-5 d-none" id="no-message-found">
+                <h3 class="text-warning">No Phone Found. Please Try Again</h3>
+            </div>
+            <div class="d-none text-center mb-5" id="showAll">
+                <div class="btn btn-primary" id="showAll-btn">LoadMore....</div>
+            </div>
+        </section>
+
+        <section class="d-none" id="loader">
+            <div class="d-flex justify-content-center align-items-center" style="height:400px">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- Button trigger modal -->
+            
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="info">
+                            <h6>Storage : <span id="storage"></span></h6>
+                            <h6>Memory : <span id="memory"></span></h6>
+                            <h6>Display Size : <span id="display"></span></h6>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="bootstrap.min.js"></script>
+    <script src="phone.js"></script>
+</body>
+</html>
