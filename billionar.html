@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billionaires</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <nav class="bg-dark p-3 sticky-top mb-4">
+            <h2 class="text-center text-white">Billionaire</h2>
+            <div class="d-lg-flex justify-content-center align-items-center gap-lg-4">
+                <button class="btn btn-primary" id="technologies">Technologies</button>
+                <button class="btn btn-primary" id="fashion">Fashion</button>
+                <button class="btn btn-primary" id="finance">Finance</button>
+                <button class="btn btn-primary" id="investments">Investments</button>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section>
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="star_container">
+                
+            </div>
+        </section>
+        <section class="d-none" id="loader">
+            <div class="d-flex justify-content-center align-items-center" style="height:400px">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!-- Button trigger modal -->
+        
+        
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="exampleModalLabel"></h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <h5 class="text-center">Biography</h5>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12 col-md-3" id="modal-img">
+                                    
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <h6 id="bio" style="text-align:justify;"></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body" id="info">
+                            <h6>Citizenship: <span id="citizenship"></span></h6>
+                            <h6>State: <span id="state"></span></h6>
+                            <h6>Gender: <span id="gender"></span></h6>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="bootstrap.min.js"></script>
+    <script src="billionar.js"></script>
+</body>
+</html>
